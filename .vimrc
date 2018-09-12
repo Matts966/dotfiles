@@ -23,6 +23,9 @@ call neobundle#begin(expand('/Users/masahiromatsui/.vim/bundle/'))
 " NeoBundle 'thinca/vim-quickrun'
 " let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
 
+" lightline
+NeoBundle 'itchyny/lightline.vim'
+
 " Nerdtree
 NeoBundle 'scrooloose/nerdtree'
 " 隠しファイルを表示する

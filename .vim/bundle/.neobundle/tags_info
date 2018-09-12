@@ -1,9 +1,9 @@
 SerialExperimentsLain
 jedi-vim
+lightline.vim
 moonshine-vim
 neobundle.vim
 neocomplete.vim
 nerdtree
 vim-django-support
 vim-pyenv
-vim-quickrun
