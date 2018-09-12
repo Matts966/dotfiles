@@ -1,1 +1,0 @@
-/Users/masahiromatsui/GoogleDrive/dotfiles/.tmux
