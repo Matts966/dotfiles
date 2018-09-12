@@ -1,6 +1,6 @@
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 CANDIDATES := $(wildcard .??*) bin
-EXCLUSIONS := .DS_Store .git .gitmodules .travis.yml
+EXCLUSIONS := .DS_Store .git .gitmodules .travis.yml .ssh
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 .DEFAULT_GOAL := help
@@ -10,11 +10,15 @@ all:
 list: ## Show dot files in this repo
 	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
 
+reset-ssh:
+	@rm -rfi $(HOME)/.ssh
+	@ln -vFsn $(abspath .ssh) $(HOME)
+
 deploy: ## Create symlink to home directory
 	@echo 'Copyright (c) 2013-2015 BABAROT All Rights Reserved.'
 	@echo '==> Start to deploy dotfiles to home directory.'
 	@echo ''
-	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
+	@$(foreach val, $(DOTFILES), ln -vFsn $(abspath $(val)) $(HOME);)
 
 init: ## Setup environment settings
 	@#DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
@@ -30,7 +34,6 @@ update: ## Fetch changes for this repo
 	git submodule foreach git pull origin master
 
 install: update deploy init ## Run make update, deploy, init
-	@exec $$SHELL
 
 clean: ## Remove the dot files and this repo
 	@echo 'Remove dot files in your home directory...'
