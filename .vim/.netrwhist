@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/masahiromatsui/dragon-hunter-api'
+let g:netrw_dirhist_2='/Users/masahiromatsui/reactPlayground/react-native-example/android'
+let g:netrw_dirhist_3='/Users/masahiromatsui/python_files_secret'

@@ -268,3 +268,4 @@ augroup restore_t_Co
   endif
   autocmd VimLeave * let &t_Co = s:saved_t_Co
 augroup END
+

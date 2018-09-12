@@ -10,6 +10,7 @@ alias ghc='ghc -Wall'
 alias st='stree'
 alias commit='commit --allow-empty'
 alias t='tmux'
+alias ll='ls -l'
 
 export LANG=ja_JP.UTF-8
 
