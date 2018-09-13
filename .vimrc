@@ -1,15 +1,8 @@
 scriptencoding utf-8
 set encoding=utf-8
-" ~/.pyenv/shimsを$PATHに追加
-" jedi-vim や vim-pyenc のロードよりも先に行う必要がある、はず。
-let $PATH = "~/.pyenv/shims:".$PATH
-
-"anacondaをロード
-let $PYTHONHOME='/Users/masahiromatsui/.pyenv/versions/anaconda3-4.3.1'
-
 "--------------------------------------------------------------------------
 " neobundle
-set runtimepath+=/Users/masahiromatsui/.vim/bundle/neobundle.vim/
+set runtimepath+=/.vim/bundle/neobundle.vim/
 
 set nocompatible               " Be iMproved
 filetype off                   " Required!
@@ -18,7 +11,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('/Users/masahiromatsui/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " NeoBundle 'thinca/vim-quickrun'
 " let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
@@ -40,11 +33,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
-" DJANGO_SETTINGS_MODULE を自動設定
-NeoBundleLazy "lambdalisue/vim-django-support", {
-      \ "autoload": {
-      \   "filetypes": ["python", "python3", "djangohtml"]
-      \ }}
 
 "カラースキームをインストール
 NeoBundle 'KKPMW/moonshine-vim'
@@ -52,21 +40,7 @@ NeoBundle 'lu-ren/SerialExperimentsLain'
 "Jedi-Vim
 NeoBundle 'davidhalter/jedi-vim'
 
-
-" pyenv 処理用に vim-pyenv を追加
-" Note: depends が指定されているため jedi-vim より後にロードされる（ことを期待）
-NeoBundleLazy "lambdalisue/vim-pyenv", {
-      \ "depends": ['davidhalter/jedi-vim'],
-      \ "autoload": {
-      \   "filetypes": ["python", "python3", "djangohtml"]
-      \ }}
-
-
 call neobundle#end()
-
-" docstringは表示しない
-autocmd FileType python setlocal completeopt-=preview
-
 
 " 背景色をデフォルトに揃える。colorschemeより前に記述.
 autocmd ColorScheme * highlight Normal ctermbg=none
@@ -87,17 +61,9 @@ if neobundle#exists_not_installed_bundles()
   "finish
 endif
 
-"JediとNeoCompleteの連携
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-
 if !exists('g:neocomplete#force_omni_input_patterns')
         let g:neocomplete#force_omni_input_patterns = {}
 endif
-
-" let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 
 "------------------------------------
 " neocomplete.vim
@@ -134,9 +100,6 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Close popup by <Space>.
 inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-
 
 " setting
 "カーソルを常に画面の中央に表示させる
