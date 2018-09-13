@@ -18,7 +18,7 @@ deploy: ## Create symlink to home directory
 	@echo 'Copyright (c) 2013-2015 BABAROT All Rights Reserved.'
 	@echo '==> Start to deploy dotfiles to home directory.'
 	@echo ''
-	@$(foreach val, $(DOTFILES), ln -vFsn $(abspath $(val)) $(HOME);)
+	@$(foreach val, $(DOTFILES), ln -sfFnv $(abspath $(val)) $(HOME);)
 
 init: ## Setup environment settings
 	@#DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
