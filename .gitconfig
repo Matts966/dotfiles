@@ -1,22 +1,12 @@
-[core]
-	excludesfile = /Users/masahiromatsui/.gitignore_global
-	attributesfile = /Users/masahiromatsui/.gitattributes
+[include]
+path = ~/GoogleDrive/dotfiles/.gitconfig_for_secret
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[user]
-	name = Matts966
-	email = Matts966@users.noreply.github.com
-[github]
-    user = Matts966
-[alias]
-    hub-new-pub = "!REPO=$(basename $PWD) GHUSER=$(git config --get github.user); curl -u $GHUSER:f699bc228e6886d96674cb1e2cb31c46acca6e1f https://api.github.com/user/repos -d {\\\"name\\\":\\\"$REPO\\\"} --fail; git remote add origin git@github.com:$GHUSER/$REPO.git; ssh-add; git push origin master"
-    hub-new-pri = "!REPO=$(basename $PWD) GHUSER=$(git config --get github.user); curl -u $GHUSER:f699bc228e6886d96674cb1e2cb31c46acca6e1f https://api.github.com/user/repos -d {\\\"name\\\":\\\"$REPO\\\"\\,\\\"private\\\":\\\"true\\\"} --fail; git remote add origin git@github.com:$GHUSER/$REPO.git; ssh-add; git push origin master"
-[commit]
-	template = /Users/masahiromatsui/.stCommitMsg
 [diff "xlsx"]
   binary = true
   textconv = $GOPATH/bin/git-xlsx-textconv

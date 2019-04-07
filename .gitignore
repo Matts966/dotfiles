@@ -5,3 +5,5 @@
 .config/*
 !.config/fish
 .zsh/history/
+.gitconfig_for_secret
+
