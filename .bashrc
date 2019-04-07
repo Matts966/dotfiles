@@ -15,6 +15,8 @@ alias ll='ls -l'
 export LANG=ja_JP.UTF-8
 
 ssh-add &> /dev/null
-alias javac='if $(echo $PWD | grep "/Users/masahiromatsui/Dropbox/infoScience/javaDesignPattern/" > /dev/null); then javac -encoding SJIS -Xlint:deprecation; else javac; fi'
+#alias javac='if $(echo $PWD | grep "/Users/masahiromatsui/Dropbox/infoScience/javaDesignPattern/" > /dev/null); then javac -encoding SJIS -Xlint:deprecation; else javac; fi'
 
 export PATH="$HOME/.roswell/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

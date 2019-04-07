@@ -46,8 +46,9 @@ call neobundle#end()
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 "色系はここに
-colorscheme moonshine 
-"colorscheme SerialExperimentsLain 
+"colorscheme moonshine 
+colorscheme SerialExperimentsLain 
+"
 set background=dark 
 set t_Co=256
 

@@ -23,15 +23,10 @@ export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
 
 test -r ~/.bashrc && . ~/.bashrc
 
-export GOPATH=$HOME/.go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/masahiromatsui/google-cloud-sdk/path.bash.inc' ]; then source '/Users/masahiromatsui/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/masahiromatsui/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/masahiromatsui/google-cloud-sdk/completion.bash.inc'; fi
 
 export PATH="$HOME/go_appengine:$PATH"
 
@@ -55,3 +50,17 @@ export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
 ## export PATH=/Users/masahiromatsui/.cargo/bin:/Applications/Cocos/Cocos3d-x/cocos2d-x-3.10/templates:/Applications/Cocos/Cocos2d-x:/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/tools/cocos2d-console/bin:/Users/masahiromatsui/go_appengine:/Users/masahiromatsui/google-cloud-sdk/bin:/usr/local/texlive/2017/bin/x86_64-darwin:/Users/masahiromatsui/.rbenv/bin:/Users/masahiromatsui/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin:/Users/masahiromatsui/Desktop/nand2tetris/tools:~/Dropbox/infoScience/nand2tetris/tools
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/masahiromatsui/google-cloud-sdk/path.bash.inc' ]; then . '/Users/masahiromatsui/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/masahiromatsui/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/masahiromatsui/google-cloud-sdk/completion.bash.inc'; fi
+
+eval "$(stack --bash-completion-script stack)"
+
+export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
+[[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && . /usr/local/etc/profile.d/bash_completion.sh
+
+
