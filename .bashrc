@@ -20,3 +20,7 @@ ssh-add &> /dev/null
 export PATH="$HOME/.roswell/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+source .peco_history.sh
+source .todoist_functions.sh
+

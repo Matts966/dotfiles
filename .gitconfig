@@ -15,3 +15,8 @@ path = ~/GoogleDrive/dotfiles/.gitconfig_for_secret
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[user]
+	name = Matts966
+	email = "Matts966@users.noreply.github.com "
+[grep]
+	lineNumber = true
