@@ -18,10 +18,17 @@ function insert-in-buffer () {
 # todoist find item
 function peco-todoist-item () {
     local SELECTED_ITEMS="$(eval ${select_items_command})"
-    insert-in-buffer $SELECTED_ITEMS
+    todoist-exec-with-select-task "show --browse" $SELECTED_ITEMS
 }
 
-bind -x '"\C-tt": "peco-todoist-item"'
+bind -x '"\C-tl": peco-todoist-item'
+
+function peco-todoist-today () {
+    local SELECTED_ITEMS="$(todoist list --filter '(overdue | today)' | peco | cut -d ' ' -f 1 | tr '\n' ' ')"
+    todoist-exec-with-select-task "show --browse" $SELECTED_ITEMS
+}
+
+bind -x '"\C-tt": "peco-todoist-today"'
 
 # todoist find project
 function peco-todoist-project () {
@@ -36,8 +43,6 @@ function peco-todoist-labels () {
     local SELECTED_LABELS="$(todoist labels | peco | cut -d ' ' -f 1 | tr '\n' ',' | sed -e 's/,$//')"
     insert-in-buffer "${SELECTED_LABELS}" "-L"
 }
-
-bind -x '"\C-tl": peco-todoist-labels'
 
 # todoist select date
 function peco-todoist-date () {

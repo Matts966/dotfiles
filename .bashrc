@@ -11,6 +11,8 @@ alias st='stree'
 alias commit='commit --allow-empty'
 alias t='tmux'
 alias ll='ls -l'
+alias github='open -a Github\ Desktop'
+alias gh='open -a Github\ Desktop'
 
 export LANG=ja_JP.UTF-8
 
@@ -21,6 +23,6 @@ export PATH="$HOME/.roswell/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-source .peco_history.sh
-source .todoist_functions.sh
+source ~/.peco_history.sh
+source ~/.todoist_functions.sh
 
