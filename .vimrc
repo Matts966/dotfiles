@@ -2,16 +2,16 @@ scriptencoding utf-8
 set encoding=utf-8
 "--------------------------------------------------------------------------
 " neobundle
-set runtimepath+=/.vim/bundle/neobundle.vim/
+set runtimepath+=/Users/masahiro.matsui/.vim/bundle/neobundle.vim/
 
 set nocompatible               " Be iMproved
 filetype off                   " Required!
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+"# if has('vim_starting')
+"#   set runtimepath+=/Users/masahiro.matsui/.vim/bundle/neobundle.vim/
+"# endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('/Users/masahiro.matsui/.vim/bundle/'))
 
 " NeoBundle 'thinca/vim-quickrun'
 " let g:quickrun_config = {'*': {'hook/time/enable': '1'},}

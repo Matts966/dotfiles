@@ -24,7 +24,7 @@ export PATH="/usr/local/texlive/2017/bin/x86_64-darwin:$PATH"
 test -r ~/.bashrc && . ~/.bashrc
 
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:
+export PATH=$GOPATH/bin:$PATH
 export GOBIN=$GOPATH/bin
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
@@ -65,7 +65,7 @@ export BASH_COMPLETION_COMPAT_DIR=/usr/local/etc/bash_completion.d
 [[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && . /usr/local/etc/profile.d/bash_completion.sh
 
 
-export PATH=~/apache-maven-3.6.1/bin:/Users/masahiromatsui/google-cloud-sdk/bin:/Users/masahiromatsui/.rbenv/shims:/Users/masahiromatsui/.local/bin:/Users/masahiromatsui/.cargo/bin:/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/templates:/Applications/Cocos/Cocos2d-x:/Users/masahiromatsui/go_appengine:/Users/masahiromatsui/.yarn/bin:/Users/masahiromatsui/.config/yarn/global/node_modules/.bin:/Users/masahiromatsui/.roswell/bin:/usr/local/texlive/2017/bin/x86_64-darwin:/Users/masahiromatsui/.rbenv/bin:/Users/masahiromatsui/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/go/bin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin\ Workbooks.app/Contents/SharedSupport/path-bin:/Users/masahiromatsui/Library/Android/sdk/platform-tools:/Users/masahiromatsui/Library/Android/sdk/tools:/Users/masahiromatsui/go/bin:/Users/masahiromatsui/Downloads/nbc-1.2.1.r4.osx\ 2/NXT/:/opt/gnuarm/gcc-arm-none-eabi-7-2017-q4-major/bin
+export PATH+=:~/apache-maven-3.6.1/bin:/Users/masahiromatsui/google-cloud-sdk/bin:/Users/masahiromatsui/.rbenv/shims:/Users/masahiromatsui/.local/bin:/Users/masahiromatsui/.cargo/bin:/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/templates:/Applications/Cocos/Cocos2d-x:/Users/masahiromatsui/go_appengine:/Users/masahiromatsui/.yarn/bin:/Users/masahiromatsui/.config/yarn/global/node_modules/.bin:/Users/masahiromatsui/.roswell/bin:/usr/local/texlive/2017/bin/x86_64-darwin:/Users/masahiromatsui/.rbenv/bin:/Users/masahiromatsui/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/go/bin:/usr/local/share/dotnet:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin\ Workbooks.app/Contents/SharedSupport/path-bin:/Users/masahiromatsui/Library/Android/sdk/platform-tools:/Users/masahiromatsui/Library/Android/sdk/tools:/Users/masahiromatsui/go/bin:/Users/masahiromatsui/Downloads/nbc-1.2.1.r4.osx\ 2/NXT/:/opt/gnuarm/gcc-arm-none-eabi-7-2017-q4-major/bin
 
 if [ -f $HOME/.asdf/asdf.sh ]; then
   . $HOME/.asdf/asdf.sh
@@ -75,5 +75,5 @@ if [ -f $HOME/.asdf/asdf.sh ]; then
 . $HOME/.asdf/completions/asdf.bash
 fi
 
-export PS1='\[\e[1;32m\]\u\[\e[0;31m\]:\[\e[1;32m\]\w${text}\[\e[0;31m\]$\[\e[1;32m\] '
+#export PS1='\[\e[1;32m\]\u\[\e[0;31m\]:\[\e[1;32m\]\w${text}\[\e[0;31m\]$\[\e[1;32m\] '
 
