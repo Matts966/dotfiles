@@ -75,5 +75,5 @@ if [ -f $HOME/.asdf/asdf.sh ]; then
 . $HOME/.asdf/completions/asdf.bash
 fi
 
-export PS1='\[\e[1;32m\]\u\[\e[0;31m\]:\[\e[1;32m\]\w${text}\[\e[0;31m\]$\[\e[1;32m\] '
+export PS1='\[\e[1;30m\]\u\[\e[0;31m\]:\[\e[1;30m\]\w${text}\[\e[0;31m\]$\[\e[1;30m\] '
 
