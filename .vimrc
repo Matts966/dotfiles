@@ -1,26 +1,49 @@
 scriptencoding utf-8
 set encoding=utf-8
 "--------------------------------------------------------------------------
-" neobundle
-set runtimepath+=/Users/masahiro.matsui/.vim/bundle/neobundle.vim/
 
-set nocompatible               " Be iMproved
-filetype off                   " Required!
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-"# if has('vim_starting')
-"#   set runtimepath+=/Users/masahiro.matsui/.vim/bundle/neobundle.vim/
-"# endif
+" Make sure you use single quotes
 
-call neobundle#begin(expand('/Users/masahiro.matsui/.vim/bundle/'))
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
 
-" NeoBundle 'thinca/vim-quickrun'
-" let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+" Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" lightline
-NeoBundle 'itchyny/lightline.vim'
+" Multiple Plug commands can be written in a single line using | separators
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" Nerdtree
-NeoBundle 'scrooloose/nerdtree'
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+" Using a non-master branch
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+Plug 'fatih/vim-go', { 'tag': '*' }
+
+" Plugin options
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Unmanaged plugin (manually installed and updated)
+Plug '~/my-prototype-plugin'
+
+Plug 'thinca/vim-quickrun'
+let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+
+Plug 'itchyny/lightline.vim'
+
+Plug 'scrooloose/nerdtree'
+
 " 隠しファイルを表示する
 let NERDTreeShowHidden = 1
 nnoremap <silent><C-e> :NERDTree<CR>
@@ -29,38 +52,24 @@ let g:nerdtree_tabs_open_on_console_startup=1
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+Plug 'Shougo/neocomplete.vim'
 
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-
-"カラースキームをインストール
-NeoBundle 'KKPMW/moonshine-vim'
-NeoBundle 'lu-ren/SerialExperimentsLain'
+Plug 'lu-ren/SerialExperimentsLain'
 "Jedi-Vim
-NeoBundle 'davidhalter/jedi-vim'
-
-call neobundle#end()
+Plug 'davidhalter/jedi-vim'
 
 " 背景色をデフォルトに揃える。colorschemeより前に記述.
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
 "色系はここに
-"colorscheme moonshine 
-colorscheme SerialExperimentsLain 
-"
+"colorscheme moonshine
+colorscheme SerialExperimentsLain
+
+" Initialize plugin system
+call plug#end()
+
 set background=dark 
 set t_Co=256
-
-filetype plugin indent on     " Required!
-
-" Installation check.
-if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
-  "finish
-endif
 
 if !exists('g:neocomplete#force_omni_input_patterns')
         let g:neocomplete#force_omni_input_patterns = {}
