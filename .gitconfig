@@ -1,5 +1,5 @@
 [include]
-path = ~/GoogleDrive/dotfiles/.gitconfig_for_secret
+path = ~/.gitconfig_for_secret
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
