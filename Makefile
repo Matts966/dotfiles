@@ -21,7 +21,7 @@ deploy: ## Create symlink to home directory
 	@$(foreach val, $(DOTFILES), ln -sfFnv $(abspath $(val)) $(HOME);)
 
 init: ## Setup environment settings
-	@#DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
+	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
 
 test: ## Test dotfiles and init scripts
 	@#DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/test/test.sh
@@ -33,7 +33,7 @@ update: ## Fetch changes for this repo
 	git submodule update
 	git submodule foreach git pull origin master
 
-install: update deploy init ## Run make update, deploy, init
+install: update init deploy ## Run make update, deploy, init
 
 clean: ## Remove the dot files and this repo
 	@echo 'Remove dot files in your home directory...'

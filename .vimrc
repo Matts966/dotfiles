@@ -31,8 +31,6 @@ Plug 'fatih/vim-go', { 'tag': '*' }
 " Plugin options
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
@@ -54,7 +52,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 Plug 'Shougo/neocomplete.vim'
 
-Plug 'lu-ren/SerialExperimentsLain'
+Plug 'lu-ren/SerialExperimentsLain', {'do': 'echo a; cp colors/* ~/.vim/colors/'}
+
 "Jedi-Vim
 Plug 'davidhalter/jedi-vim'
 
