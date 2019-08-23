@@ -53,7 +53,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 Plug 'Shougo/neocomplete.vim'
 
-Plug 'lu-ren/SerialExperimentsLain', {'do': 'cp colors/* ~/.vim/colors/'}
+Plug 'lu-ren/SerialExperimentsLain', {'do': 'mkdir -p ~/.vim/colors && cp colors/* ~/.vim/colors/'}
 
 "Jedi-Vim
 Plug 'davidhalter/jedi-vim'
