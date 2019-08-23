@@ -13,6 +13,7 @@ alias t='tmux'
 alias ll='ls -l'
 alias github='open -a Github\ Desktop'
 alias gh='open -a Github\ Desktop'
+alias vi='vim'
 
 export LANG=ja_JP.UTF-8
 
