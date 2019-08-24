@@ -14,6 +14,7 @@ alias ll='ls -l'
 alias github='open -a Github\ Desktop'
 alias gh='open -a Github\ Desktop'
 alias vi='vim'
+alias c='clear'
 
 export LANG=ja_JP.UTF-8
 
