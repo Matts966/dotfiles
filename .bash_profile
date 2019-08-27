@@ -57,7 +57,7 @@ if [ -f '/Users/masahiromatsui/google-cloud-sdk/path.bash.inc' ]; then . '/Users
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/masahiromatsui/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/masahiromatsui/google-cloud-sdk/completion.bash.inc'; fi
 
-if [ $(which stack) ]; then
+if [ $(which stack 2>/dev/null) ]; then
   eval "$(stack --bash-completion-script stack)"
 fi
 
