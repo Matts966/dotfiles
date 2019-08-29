@@ -1,3 +1,14 @@
+# Start tmux session if the terminal is iTerm.
+if [[ $TERM_PROGRAM = "iTerm.app" ]]; then
+  if [[ -z "$TMUX" ]]; then
+    if tmux has-session 2>/dev/null; then
+        exec tmux attach
+    else
+        exec tmux
+    fi
+  fi
+fi
+
 alias quit='exit'
 alias rain='rainbowstream'
 alias texshop='open -a TexShop'
