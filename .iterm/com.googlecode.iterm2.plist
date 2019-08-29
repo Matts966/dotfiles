@@ -468,7 +468,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 1680 1027 0 0 1680 1027 </string>
+	<string>840 0 836 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>840 0 834 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1129,7 +1129,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -1773,7 +1773,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2413,7 +2413,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -3061,7 +3061,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -3975,7 +3975,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -4631,7 +4631,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -5545,7 +5545,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/masahiromatsui</string>
+			<string>~</string>
 		</dict>
 	</array>
 	<key>NoSyncAllAppVersions</key>
@@ -5562,7 +5562,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{344, 661}</string>
+		<string>{343, 661}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -5577,7 +5577,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>587222812.08512604</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>46</integer>
+	<integer>76</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -6417,7 +6417,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/masahiromatsui/GoogleDrive/dotfiles/.iterm</string>
+	<string>~/.iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -6431,7 +6431,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-22T14:27:14Z</date>
+	<date>2019-08-29T16:19:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
