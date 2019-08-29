@@ -10,10 +10,6 @@ all:
 list: ## Show dot files in this repo
 	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
 
-reset-ssh:
-	@rm -rfi $(HOME)/.ssh
-	@ln -vFsn $(abspath .ssh) $(HOME)
-
 deploy: ## Create symlink to home directory
 	@echo 'Copyright (c) 2013-2015 BABAROT All Rights Reserved.'
 	@echo '==> Start to deploy dotfiles to home directory.'

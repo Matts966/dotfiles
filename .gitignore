@@ -3,7 +3,9 @@
 .ssh/*
 .garbage/*
 .config/*
+!.config/karabiner
 !.config/fish
 .zsh/history/
 .gitconfig_for_secret
+.vim/*
 
