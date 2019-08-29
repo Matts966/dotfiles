@@ -1,11 +1,3 @@
-if [[ -z "$TMUX" ]]; then
-    if tmux has-session 2>/dev/null; then
-        exec tmux attach
-    else
-        exec tmux
-    fi
-fi
-
 alias quit='exit'
 alias rain='rainbowstream'
 alias texshop='open -a TexShop'
