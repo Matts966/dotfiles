@@ -8,4 +8,5 @@
 .zsh/history/
 .gitconfig_for_secret
 .vim/*
+.tmux/resurrect/*
 
