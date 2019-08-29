@@ -7,3 +7,8 @@
 .zsh/history/
 .gitconfig_for_secret
 
+SerialExperimentsLain.vim
+plug.vim
+
+.tmux/resurrect/*
+
