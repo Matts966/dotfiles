@@ -285,6 +285,20 @@
 			<key>Text</key>
 			<string>\e:w\n</string>
 		</dict>
+		<key>0x74-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>38</integer>
+			<key>Text</key>
+			<string>:GoTest\n</string>
+		</dict>
+		<key>0x78-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>38</integer>
+			<key>Text</key>
+			<string>:GoRun\n</string>
+		</dict>
 		<key>0x7a-0x100000</key>
 		<dict>
 			<key>Action</key>
