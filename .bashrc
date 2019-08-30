@@ -1,10 +1,12 @@
 # Start tmux session if the terminal is iTerm.
 if [[ $TERM_PROGRAM = "iTerm.app" ]]; then
   if [[ -z "$TMUX" ]]; then
-    if tmux has-session 2>/dev/null; then
-        exec tmux attach
+    if [[ $(tmux lsc) ]]; then
+      echo "There is already a tmux client, so open default client."
+    elif tmux has-session 2>/dev/null; then
+      exec tmux attach
     else
-        exec tmux
+      exec tmux
     fi
   fi
 fi
