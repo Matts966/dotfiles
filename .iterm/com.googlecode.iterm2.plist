@@ -250,6 +250,20 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x54-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>38</integer>
+			<key>Text</key>
+			<string>:GoTest\n</string>
+		</dict>
+		<key>0x58-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>38</integer>
+			<key>Text</key>
+			<string>:GoRun\n</string>
+		</dict>
 		<key>0x68-0x100000</key>
 		<dict>
 			<key>Action</key>
@@ -284,20 +298,6 @@
 			<integer>38</integer>
 			<key>Text</key>
 			<string>\e:w\n</string>
-		</dict>
-		<key>0x74-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>38</integer>
-			<key>Text</key>
-			<string>:GoTest\n</string>
-		</dict>
-		<key>0x78-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>38</integer>
-			<key>Text</key>
-			<string>:GoRun\n</string>
 		</dict>
 		<key>0x7a-0x100000</key>
 		<dict>
@@ -471,6 +471,8 @@
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>0 33 1680 861 0 0 1680 1028 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>840 898 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
@@ -5567,7 +5569,9 @@
 		<string>3.3.2</string>
 		<string>3.2.9</string>
 		<string>3.3.1</string>
+		<string>3.3.4</string>
 		<string>3.3.0</string>
+		<string>3.3.3</string>
 	</array>
 	<key>NoSyncAutoBurialReveal</key>
 	<true/>
@@ -5589,9 +5593,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>84D89B69-8150-4477-8481-FCB8F5BD4210</string>
 	<key>NoSyncLastTipTime</key>
-	<real>587222812.08512604</real>
+	<real>589282085.93575001</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>76</integer>
+	<integer>143</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -6376,6 +6380,7 @@
 		<string>0075</string>
 		<string>0076</string>
 		<string>0077</string>
+		<string>0078</string>
 	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
@@ -6445,7 +6450,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-29T16:19:18Z</date>
+	<date>2019-09-18T21:11:59Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -6453,7 +6458,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -6483,7 +6488,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.2</string>
+	<string>3.3.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
