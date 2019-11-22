@@ -1,5 +1,9 @@
 dotfiles
 
+```
+make install
+```
+
 <!--
 <p align="center">
 <a name="top" href="http://b4b4r07.com/dotfiles"><img src="https://raw.githubusercontent.com/b4b4r07/screenshots/master/dotfiles/logo.png"></a>
