@@ -28,6 +28,12 @@ alias github='open -a Github\ Desktop'
 alias gh='open -a Github\ Desktop'
 alias vi='vim'
 alias c='clear'
+line() {
+  local in; read -t 0 in && read in
+  [[ "$in" == "" ]] && in="ok"
+  curl -X POST -H "Authorization: Bearer $(cat ~/line_access_token)" \
+    -F "message=$in" https://notify-api.line.me/api/notify
+}
 
 export LANG=ja_JP.UTF-8
 

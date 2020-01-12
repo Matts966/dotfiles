@@ -79,3 +79,11 @@ export PS1='\[\e[1;30m\]\u\[\e[0;31m\]:\[\e[1;30m\]\w${text}\[\e[0;31m\]$\[\e[1;
 
 PATH=~/.cache/rebar3/bin:$PATH
 
+if [ -f /usr/libexec/java_home ]; then
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+  export JDK_16=$JAVA_HOME
+  export JDK_17=$JAVA_HOME
+  export JDK_18=$JAVA_HOME
+  export JDK_9=`/usr/libexec/java_home -v 9`
+fi
+
