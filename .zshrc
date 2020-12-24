@@ -8,9 +8,9 @@ bindkey '^R' peco-history-selection
 
 function peco-grep() {
     FILE_LINE=$(grep -rniI ".*" * | peco)
-    FILE=$(cut -d':' -f1 <<<$FILE_LINE)
-    LINE=$(cut -d':' -f2 <<<$FILE_LINE)
-    echo $FILE | xargs -o vim +$LINE
+    FILE=$(cut -d ':' -f1 <<<$FILE_LINE)
+    LINE=$(cut -d ':' -f2 <<<$FILE_LINE)
+    echo "\"${FILE}\"" | xargs -o vim +$LINE
 }
 zle -N peco-grep
 bindkey '^f' peco-grep
