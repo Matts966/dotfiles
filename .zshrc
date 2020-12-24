@@ -1,5 +1,5 @@
 function peco-history-selection() {
-    BUFFER=`history -n 1 | sort | awk '!a[$0]++' | peco`
+    BUFFER=`history -E 1 | sort -r | awk '{c="";for(i=4;i<=NF;i++) c=c $i" "; print c}' | peco`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
@@ -7,7 +7,7 @@ zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
 function peco-grep() {
-    FILE_LINE=$(grep -rni ".*" * | awk '!a[$0]++' | peco)
+    FILE_LINE=$(grep -rniI ".*" * | peco)
     FILE=$(cut -d':' -f1 <<<$FILE_LINE)
     LINE=$(cut -d':' -f2 <<<$FILE_LINE)
     echo $FILE | xargs -o vim +$LINE
